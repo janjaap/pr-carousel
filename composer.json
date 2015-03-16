@@ -1,0 +1,32 @@
+{
+  "require": {
+    "silex/silex": "~1.2",
+    "twig/twig": "~1.18",
+    "doctrine/dbal": "~2.2",
+    "wurfl/wurfl-api": "1.5.2.1",
+    "doctrine/migrations": " 1.0.*@dev",
+    "symfony/form": "~2.6",
+    "symfony/validator": "~2.6",
+    "symfony/config": "~2.6",
+    "symfony/translation": "~2.6",
+    "symfony/security-csrf": "~2.6",
+    "symfony/twig-bridge": "~2.6",
+    "symfony/doctrine-bridge": "~2.6"
+  },
+  "require-dev": {
+    "symfony/console": "~2.6",
+    "symfony/yaml": "~2.6",
+    "doctrine/orm": "~2.4",
+    "silex/web-profiler": "~1.0",
+    "knplabs/console-service-provider": "~1.0"
+  },
+  "autoload": {
+    "psr-0": {
+      "PR\\Util": "src/",
+      "PR\\Entity": "src/",
+      "PR\\Form\\Type": "src/",
+      "PR\\Form\\DataTransformer": "src/",
+      "PR\\Entity\\Loader": "src/"
+    }
+  }
+}

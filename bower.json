@@ -1,0 +1,9 @@
+{
+  "name"         : "Peer review caroussel",
+  "version"      : "0.0.1-beta",
+  "dependencies" : {
+    "modernizr"       : "~2.8",
+    "jquery"          : "2.*",
+    "normalize-css"   : "~3"
+  }
+}

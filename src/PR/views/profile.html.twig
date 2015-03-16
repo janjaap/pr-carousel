@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block page_content %}
+    {{ developer.name }}<br />
+    {{ developer.handle }}<br />
+    {{ developer.level }}<br />
+
+    {% for expertise in developer.expertise %}
+        {{ expertise }}<br />
+    {% endfor %}
+
+    <form action="/profile/{{ developer.handle }}" method="post">
+        <fieldset>
+            <legend>Edit</legend>
+
+            {{ form_widget(form) }}
+
+            <input type="submit" name="submit" />
+        </fieldset>
+    </form>
+{% endblock page_content %}

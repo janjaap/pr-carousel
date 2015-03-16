@@ -1,0 +1,30 @@
+#!/usr/bin/env php
+<?php
+use Doctrine\DBAL\Migrations\Tools\Console\Command\MigrateCommand;
+use Doctrine\DBAL\Migrations\Tools\Console\Command\DiffCommand;
+use Doctrine\DBAL\Migrations\Tools\Console\Command\GenerateCommand;
+use Doctrine\ORM\Tools\Console\Command\GenerateEntitiesCommand;
+use Knp\Provider\ConsoleServiceProvider;
+
+set_time_limit( 0 );
+
+require_once __DIR__ . '/../vendor/autoload.php';
+require_once __DIR__ . '/config.php';
+
+$app->register(new ConsoleServiceProvider(), array(
+    'console.name' => 'ConsoleApp',
+    'console.version' => '1.0.0',
+    'console.project_directory' => __DIR__ . '/../src'
+));
+
+/** @var Knp\Console\Application $app */
+$app = $app['console'];
+
+$app->addCommands( [
+    new MigrateCommand(),
+    new DiffCommand(),
+    new GenerateCommand(),
+    new GenerateEntitiesCommand()
+] );
+
+$app->run();
